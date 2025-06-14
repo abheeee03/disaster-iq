@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle, Info, AlertTriangle, BellRing } from "lucide-react";
+import { NotificationSignup } from "@/components/NotificationSignup";
 
 export default function Alerts() {
   const [activeTab, setActiveTab] = useState("all");
@@ -133,8 +134,11 @@ export default function Alerts() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <NotificationChannelCard />
-        <AlertRulesCard />
+        <NotificationSignup />
+        <div className="grid gap-6">
+          <NotificationChannelCard />
+          <AlertRulesCard />
+        </div>
       </div>
     </div>
   );

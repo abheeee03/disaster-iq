@@ -14,7 +14,6 @@ export default function MapPage() {
   const [timeRange, setTimeRange] = useState("24h");
   const [loading, setLoading] = useState(true);
 
-  // Dynamic import of Leaflet Map component because it requires browser APIs
   const DisasterMap = dynamic(() => import("../../components/DisasterMap"), {
     ssr: false,
     loading: () => (
