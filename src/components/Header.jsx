@@ -24,7 +24,7 @@ const navigationItems = [
 
 export function Header() {
   return (
-    <header className="bg-background border-b sticky top-0 z-40">
+    <header className="bg-background border-b sticky top-0 z-40 px-10">
       <div className="container mx-auto flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <MountainIcon className="h-6 w-6 text-primary" />

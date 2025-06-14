@@ -84,7 +84,7 @@ export default function Home() {
   // Display error state if needed
   if (error) {
     return (
-      <div className="p-8 bg-red-50 border border-red-200 rounded-lg">
+      <div className="p-10 bg-red-50 border border-red-200 rounded-lg">
         <h2 className="text-xl font-bold text-red-700 mb-2">Error Loading Data</h2>
         <p className="text-red-600">{error}</p>
         <p className="mt-4">Please try refreshing the page or contact support if the problem persists.</p>
@@ -94,13 +94,14 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 px-10">
         <h1 className="text-3xl font-bold tracking-tight">Disaster Monitoring Dashboard</h1>
         <p className="text-muted-foreground">
           Welcome to DisasterIQ, a comprehensive platform for monitoring and tracking natural disasters worldwide.
         </p>
       </div>
-      
+      <div className="px-10">
+
       <Tabs defaultValue="overview" className="space-y-4">
         <TabsList>
           <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -261,5 +262,6 @@ export default function Home() {
         </TabsContent>
       </Tabs>
     </div>
+              </div>
   );
 }
